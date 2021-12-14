@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "server-blockade",
+  "version": "${version}",
+  "name": "Server Blockade",
+  "description": "A mod that prevents you from connecting to a configurable list of servers.",
+  "authors": [
+    "kthchew"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/server-blockade/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "io.github.kthchew.serverblockade.ServerBlockade"
+    ]
+  },
+  "mixins": [
+    "server-blockade.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.12.12",
+    "minecraft": "1.18.x"
+  }
+}

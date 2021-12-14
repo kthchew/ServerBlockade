@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.kthchew.serverblockade.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "ConnectionMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

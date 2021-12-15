@@ -4,9 +4,10 @@
   "package": "io.github.kthchew.serverblockade.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "ConnectionMixin"
   ],
   "client": [
+    "ConnectionMixin",
+    "DirectConnectScreenAccessor"
   ],
   "injectors": {
     "defaultRequire": 1

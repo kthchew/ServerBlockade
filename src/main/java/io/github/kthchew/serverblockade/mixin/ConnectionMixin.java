@@ -5,10 +5,9 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.DirectConnectScreen;
 import net.minecraft.client.gui.screen.DisconnectedScreen;
 import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.client.gui.screen.ScreenTexts;
 import net.minecraft.client.gui.screen.multiplayer.MultiplayerScreen;
 import net.minecraft.client.network.ServerInfo;
-import net.minecraft.text.TranslatableText;
+import net.minecraft.text.Text;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -28,7 +27,7 @@ public class ConnectionMixin {
             } else {
                 parent = client.currentScreen;
             }
-            Screen blockedScreen = new DisconnectedScreen(parent, ScreenTexts.CONNECT_FAILED, new TranslatableText("disconnect.loginFailedInfo", "ServerBlockade"));
+            Screen blockedScreen = new DisconnectedScreen(parent, Text.translatable("connect.failed"), Text.translatable("disconnect.loginFailedInfo", "ServerBlockade"));
             client.setScreen(blockedScreen);
 
             ci.cancel();
